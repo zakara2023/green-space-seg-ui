@@ -7,7 +7,7 @@ import pytorch_lightning as pl
 from torchvision import transforms
 import json
 import sys
-sys.path.insert(1, '../')
+sys.path.insert(1, ‘../’) 
 import model.transforms as T
 from model.aermae import AerMAE
 from model.aegis import AeGISUpernet, AeGISFormer
