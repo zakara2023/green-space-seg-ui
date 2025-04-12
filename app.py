@@ -33,4 +33,4 @@ l_mae = AerMAEBolt(mae, lr=lr, warmup=5, epochs=epochs, accumulate_grad_batches=
 aegis = AeGISUpernet(768, l_mae.mae.encoder, inindex=[1, 3, 4, 5])
 l_aeg = AeGISBolt(aegis, lr=lr, warmup=5, epochs=epochs, accumulate_grad_batches=accum)
 l_aeg = AeGISBolt(aegis, lr=lr, warmup=5, epochs=epochs, accumulate_grad_batches=accum)
-l_aeg.load_state_dict(torch.load('aegis-exp13-epoch=15-val_loss_epoch=0.23.ckpt', weights_only=True)['state_dict'])
+l_aeg.load_state_dict(torch.load('checkpoint/aegis-exp13-epoch=15-val_loss_epoch=0.23.ckpt', weights_only=True)['state_dict'])
